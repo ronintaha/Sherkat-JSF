@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: programmer
+  Date: 6/7/22
+  Time: 11:54 AM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Search</title>
+</h:head>
+
+<h:body>
+<h:form>
+    <h3>Please enter national code of person you want too find: </h3> <h:inputText value="#{personelData.nationalCode}"/> <br/>
+
+    <h:commandButton actionListener="#{getPersonelDao.getInformation()}" value="Search"/><hr/>
+    <h:outputText value="Information of person you want is ... "/><hr/>
+    Name : <h:outputText value="#{personelData.name}"/><hr/>
+    Lastname : <h:outputText value="#{personelData.lasteName}"/><hr/>
+    Age : <h:outputText value="#{personelData.age}"/><hr/>
+
+
+
+
+
+</h:form>
+</h:body>
+
+</html>
