@@ -23,8 +23,8 @@
     Your last name : <h:inputText value="#{personelData.lasteName}"/><br/>
     Your age : <h:inputText value="#{personelData.age}"/><br/>
     Your national code : <h:inputText value="#{personelData.nationalCode}"/><br/>
-    <h:commandButton value="save" actionListener="#{massagesData.doInfo()}"  /><br/>
-    <h:outputText value="#{massagesData.massage}"/><br/>
+    <h:commandButton value="save" actionListener="#{massagesData.doInfo()}"  /><hr/>
+    <h:outputText value="#{massagesData.massage}"/><hr/>
     <h:commandButton value="add in DataBase and Go to Home " actionListener="#{personelDao.create(personelData)}" action="welcomePage"/><br/>
 
 </h:form>

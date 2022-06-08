@@ -2,10 +2,13 @@ package edareh.dao.creatTabales;
 
 import edareh.dao.DBHandler;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+@RequestScoped
+@Named
 public class CreateTableVacation {
     public static void creatTableVacation(){
         DBHandler dbHandler = new DBHandler();

@@ -10,13 +10,27 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
-    <title>Title</title>
+    <title>Checking</title>
 </h:head>
 
 <h:body>
+
+    <h:form>
+        <h3>
+            Please enter your national code to see your request answer :
+        </h3>
+        <h:inputText value="#{personelData.nationalCode}"/>
+        <h:commandButton value="Check" actionListener="#{getVacationDao.getVacationDao()}">
+            <f:actionListener binding="#{massagesData.doCheck()}"/>
+        </h:commandButton>
+        <h4>
+            #{massagesData.massageCheck}
+        </h4><hr/>
+        <h:commandButton value="Back to home" action="welcomePage"/>
+    </h:form>
 
 </h:body>
 

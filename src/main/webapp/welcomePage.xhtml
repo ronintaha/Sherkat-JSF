@@ -20,9 +20,9 @@
     <h:form>
         <h:messages/>
 <h:outputText value="WELCOME"/><hr/>
-<h:commandButton actionListener="#{createTablePerson.createTableP()}" action="signInPage" value="Sign in"/><hr/>
+<h:commandButton actionListener="#{personnelManagedBean.createTable()}" action="signInPage" value="Sign in"/><hr/>
 <h:commandButton action="searchPage" value="search"/><hr/>
-<h:commandButton action="vacationReqPage" value="Vacation request"/><hr/>
+<h:commandButton actionListener="#{createTableVacation.creatTableVacation()}" action="vacationReqPage" value="Vacation request"/><hr/>
 <h:commandButton action="vacationAcceptPage" value="Manage requests"/><hr/>
 <h:commandButton action="vacationCheckPage" value="Check your request"/><hr/>
     </h:form>

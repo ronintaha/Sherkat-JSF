@@ -1,5 +1,10 @@
 package edareh.entity;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
+@RequestScoped
+@Named
 public class VacationData {
     private static int dayOfLeave;
     private static String lName;
@@ -36,7 +41,7 @@ public class VacationData {
     public VacationData(){
         this.dayOfLeave=dayOfLeave;
 //        leaveList1.add(this);
-        DataStore.vacationDataList.add(this);
+//        DataStore.vacationDataList.add(this);
     }
 //    public static List<VacationData> leaveList1 = new ArrayList<>();
 

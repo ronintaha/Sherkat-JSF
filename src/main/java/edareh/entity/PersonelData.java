@@ -18,7 +18,7 @@ public class PersonelData {
         this.nationalCode = nationalCode;
 
 //        list.add(this);
-        DataStore.dataList.add(this);
+//        DataStore.dataList.add(this);
 
     }
 //    public static List<PersonelData> list = new ArrayList<>();

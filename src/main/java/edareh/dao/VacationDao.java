@@ -4,10 +4,13 @@ package edareh.dao;
 import edareh.entity.PersonelData;
 import edareh.entity.VacationData;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+@RequestScoped
+@Named
 public class VacationDao {
     public void insertVacation(){
         DBHandler dbHandler = new DBHandler();
