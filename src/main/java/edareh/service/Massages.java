@@ -1,11 +1,13 @@
-package edareh.entity;
+package edareh.service;
+
+import edareh.entity.Personnel;
+import edareh.entity.Vacation;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @RequestScoped
-@Named
-public class MassagesData {
+public class Massages {
     public String getMassage() {
         return massage;
     }
@@ -13,17 +15,6 @@ public class MassagesData {
     public void setMassage(String massage) {
         this.massage = massage;
     }
-
-    private String massage;
-    private String massage1;
-
-    private String massage2;
-
-    private String massageLeave;
-
-    private String massageConfirm;
-
-    private String massageCheck;
 
     public String getMassageCheck() {
         return massageCheck;
@@ -57,8 +48,6 @@ public class MassagesData {
         this.massage2 = massage2;
     }
 
-    private int manID;
-
     public int getManID() {
         return manID;
     }
@@ -75,17 +64,31 @@ public class MassagesData {
         this.massage1 = massage1;
     }
 
-    PersonelData personelData = new PersonelData();
-    VacationData vacationData = new VacationData();
+    private String massage;
+
+    private String massage1;
+
+    private String massage2;
+
+    private String massageLeave;
+
+    private String massageConfirm;
+
+    private String massageCheck;
+
+    private int manID;
+
+    Personnel personnel = new Personnel();
+    Vacation vacation = new Vacation();
     public void doInfo(){
 
-        massage = "Mr "+personelData.getLasteName()+" your iformations are saved";
+        massage = "Mr "+ personnel.getLasteName()+" your iformations are saved";
     }
     public void doVacation(){
-        massage =  "Mr "+personelData.getLasteName()+" welcome , please chose the day of month you want to leave : ";
+        massage =  "Mr "+ personnel.getLasteName()+" welcome , please chose the day of month you want to leave : ";
     }
     public void doDay(){
-        massage1 = "Mr "+personelData.getLasteName()+ " you want to leave in "+ vacationData.getDayOfLeave()+ " om";
+        massage1 = "Mr "+ personnel.getLasteName()+ " you want to leave in "+ vacation.getDayOfLeave()+ " om";
     }
     public void doManager(){
         if (manID==1234){
@@ -97,13 +100,13 @@ public class MassagesData {
     }
 
     public void doLeave(){
-        massageLeave =  "Mr "+vacationData.getlName()+ " want to leave in "+ vacationData.getDayOfLeave()+ " om , Do you confirm it ? ";
+        massageLeave =  "Mr "+ vacation.getlName()+ " want to leave in "+ vacation.getDayOfLeave()+ " om , Do you confirm it ? ";
     }
     public void doconfirm(){
         massageConfirm = "saved";
 
     }
     public void doCheck(){
-        massageCheck = "Mr "+vacationData.getlName()+" your vacation request has "+vacationData.getConfirm();
+        massageCheck = "Mr "+ vacation.getlName()+" your vacation request has "+ vacation.getConfirm();
     }
 }

@@ -22,12 +22,12 @@
         <h3>
             Please enter your national code to see your request answer :
         </h3>
-        <h:inputText value="#{personelData.nationalCode}"/>
+        <h:inputText value="#{personnel.nationalCode}"/>
         <h:commandButton value="Check" actionListener="#{getVacationDao.getVacationDao()}">
-            <f:actionListener binding="#{massagesData.doCheck()}"/>
+            <f:actionListener binding="#{massages.doCheck()}"/>
         </h:commandButton>
         <h4>
-            #{massagesData.massageCheck}
+            #{massages.massageCheck}
         </h4><hr/>
         <h:commandButton value="Back to home" action="welcomePage"/>
     </h:form>

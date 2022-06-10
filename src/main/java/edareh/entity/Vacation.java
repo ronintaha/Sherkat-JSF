@@ -5,7 +5,7 @@ import javax.inject.Named;
 
 @RequestScoped
 @Named
-public class VacationData {
+public class Vacation {
     private static int dayOfLeave;
     private static String lName;
     private static String confirm;
@@ -27,7 +27,7 @@ public class VacationData {
     }
 
     public  void setlName(String lName) {
-        VacationData.lName = lName;
+        Vacation.lName = lName;
     }
 
     public  String getConfirm() {
@@ -35,15 +35,15 @@ public class VacationData {
     }
 
     public void setConfirm(String confirm) {
-        VacationData.confirm = confirm;
+        Vacation.confirm = confirm;
     }
 
-    public VacationData(){
+    public Vacation(){
         this.dayOfLeave=dayOfLeave;
 //        leaveList1.add(this);
 //        DataStore.vacationDataList.add(this);
     }
-//    public static List<VacationData> leaveList1 = new ArrayList<>();
+//    public static List<Vacation> leaveList1 = new ArrayList<>();
 
     public int getDayOfLeave() {
         return dayOfLeave;

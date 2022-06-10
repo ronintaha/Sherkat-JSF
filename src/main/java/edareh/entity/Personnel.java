@@ -5,13 +5,13 @@ import javax.inject.Named;
 
 @RequestScoped
 @Named
-public class PersonelData {
+public class Personnel {
     private static String name ;
     private static String lasteName;
     private static String age;
     private static String nationalCode;
 
-    public PersonelData(){
+    public Personnel(){
         this.name=name;
         this.lasteName=lasteName;
         this.age=age;
@@ -21,7 +21,7 @@ public class PersonelData {
 //        DataStore.dataList.add(this);
 
     }
-//    public static List<PersonelData> list = new ArrayList<>();
+//    public static List<Personnel> list = new ArrayList<>();
 
 
 
@@ -57,12 +57,12 @@ public class PersonelData {
         this.nationalCode = nationalCode;
     }
 
-//    public static PersonelData getPersonByID(String a){
+//    public static Personnel getPersonByID(String a){
 //
-//        for (int i=0;i<PersonelData.list.size();i++){
+//        for (int i=0;i<Personnel.list.size();i++){
 //
 //
-//            if (PersonelData.list.get(i).getId().equals(a)){
+//            if (Personnel.list.get(i).getId().equals(a)){
 //                return list.get(i);
 //            }
 //
@@ -70,9 +70,9 @@ public class PersonelData {
 //        }
 //return null;
 //    }
-//    public static PersonelData getPersonByLastname(String b){
-//        for (int i =0;i<PersonelData.list.size();i++){
-//            if (PersonelData.list.get(i).getLasteName().equals(b)){
+//    public static Personnel getPersonByLastname(String b){
+//        for (int i =0;i<Personnel.list.size();i++){
+//            if (Personnel.list.get(i).getLasteName().equals(b)){
 //                return list.get(i);
 //            }
 //        }

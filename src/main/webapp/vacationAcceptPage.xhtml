@@ -23,31 +23,31 @@
         <h3>
             WELCOME , Please enter your manager ID :
         </h3><br/>
-        <h:inputText value="#{massagesData.manID}"/>
-        <h:commandButton value="Login" actionListener="#{massagesData.doManager()}"/>
+        <h:inputText value="#{massages.manID}"/>
+        <h:commandButton value="Login" actionListener="#{massages.doManager()}"/>
         <h3>
-            #{massagesData.massage2}
+            #{massages.massage2}
         </h3><br/>
 
-        <h:inputText value="#{personelData.nationalCode}"/>
+        <h:inputText value="#{personnel.nationalCode}"/>
 
         <h:commandButton value="Check" actionListener="#{getVacationDao.getVacationDao()}" >
 <!--            <f:actionListener binding="#{getVacationDao.getVacationDao()}"/>-->
-            <f:actionListener binding="#{massagesData.doLeave()}"/>
+            <f:actionListener binding="#{massages.doLeave()}"/>
         </h:commandButton><hr/>
         <h3>
-            #{massagesData.massageLeave}
+            #{massages.massageLeave}
         </h3>
 
-        <h:selectOneRadio value="#{vacationData.confirm}">
+        <h:selectOneRadio value="#{vacation.confirm}">
             <f:selectItem itemValue="confirmed" itemLabel="Yes"/>
             <f:selectItem itemValue="not confirmed" itemLabel="No"/>
         </h:selectOneRadio>
         <h:commandButton value="confirm" actionListener="#{confirmDao.confirmData()}">
-        <f:actionListener binding="#{massagesData.doconfirm()}"/>
+        <f:actionListener binding="#{massages.doconfirm()}"/>
     </h:commandButton><hr/>
         <h4>
-        #{massagesData.massageConfirm}
+        #{massages.massageConfirm}
         </h4>
         <h:commandButton value="Back to home" action="welcomePage"/>
 

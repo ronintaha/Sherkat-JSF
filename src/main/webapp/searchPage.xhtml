@@ -18,13 +18,13 @@
 
 <h:body>
 <h:form>
-    <h3>Please enter national code of person you want too find: </h3> <h:inputText value="#{personelData.nationalCode}"/> <br/>
+    <h3>Please enter national code of person you want too find: </h3> <h:inputText value="#{personnel.nationalCode}"/> <br/>
 
     <h:commandButton actionListener="#{getPersonelDao.getInformation()}" value="Search"/><hr/>
     <h:outputText value="Information of person you want is ... "/><hr/>
-    Name : <h:outputText value="#{personelData.name}"/><hr/>
-    Lastname : <h:outputText value="#{personelData.lasteName}"/><hr/>
-    Age : <h:outputText value="#{personelData.age}"/><hr/>
+    Name : <h:outputText value="#{personnel.name}"/><hr/>
+    Lastname : <h:outputText value="#{personnel.lasteName}"/><hr/>
+    Age : <h:outputText value="#{personnel.age}"/><hr/>
 
     <h:commandButton value="Back to home" action="welcomePage"/>
 
