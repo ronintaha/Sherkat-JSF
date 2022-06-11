@@ -1,8 +1,9 @@
 package edareh.managedBean;
 
-import edareh.service.Massages;
+import edareh.entity.Personnel;
 import edareh.service.PersonnelService;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -11,16 +12,40 @@ import javax.inject.Named;
 @Named
 public class SignInPageManageBean {
 
-    @Inject
-    Massages massages;
+
     @Inject
     PersonnelService personnelService;
 
+    private Personnel personnel;
+    private String message;
+
+    @PostConstruct
+    public void init() {
+        personnel = new Personnel();
+    }
+
     public void doInfo(){
-        massages.doInfo();
+        message = "Mr "+ personnel.getLasteName()+" your iformations are saved";
     }
     public void InsertInfo(){
         personnelService.InsertInfo();
     }
+
+    public Personnel getPersonnel() {
+        return personnel;
+    }
+
+    public void setPersonnel(Personnel personnel) {
+        this.personnel = personnel;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
 
 }

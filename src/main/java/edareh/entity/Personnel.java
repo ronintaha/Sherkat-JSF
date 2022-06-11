@@ -4,7 +4,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @RequestScoped
-@Named
 public class Personnel {
     private static String name ;
     private static String lasteName;

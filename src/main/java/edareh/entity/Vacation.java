@@ -4,7 +4,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @RequestScoped
-@Named
 public class Vacation {
     private static int dayOfLeave;
     private static String lName;

@@ -15,4 +15,13 @@ public class VacationService {
         vacationDao.creatTableVacation();
 
     }
+    public void confirmData(){
+        vacationDao.confirmData();
+    }
+    public void getVacationDao(){
+        vacationDao.getVacationDao();
+    }
+    public void insertVacation(){
+        vacationDao.insertVacation();
+    }
 }

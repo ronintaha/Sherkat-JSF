@@ -78,7 +78,7 @@ public class VacationDao {
 
     }
 
-    public static void confirmData() {
+    public void confirmData() {
         DBHandler dbHandler = new DBHandler();
         Vacation vacation = new Vacation();
         String cSQL = "UPDATE VACATION SET Confirm = ? WHERE NATIONALCODE = ?";

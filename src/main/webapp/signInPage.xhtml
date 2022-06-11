@@ -19,12 +19,12 @@
 <h:body>
 <h:form>
     Please enter your informations :<br/>
-    Your first name : <h:inputText value="#{personnel.name}"/><br/>
-    Your last name : <h:inputText value="#{personnel.lasteName}"/><br/>
-    Your age : <h:inputText value="#{personnel.age}"/><br/>
-    Your national code : <h:inputText value="#{personnel.nationalCode}"/><br/>
-    <h:commandButton value="save" actionListener="#{signInPageManageBean.doInfo}"  /><hr/>
-    <h:outputText value="#{massages.massage}"/><hr/>
+    Your first name : <h:inputText value="#{signInPageManageBean.personnel.name}"/><br/>
+    Your last name : <h:inputText value="#{signInPageManageBean.personnel.lasteName}"/><br/>
+    Your age : <h:inputText value="#{signInPageManageBean.personnel.age}"/><br/>
+    Your national code : <h:inputText value="#{signInPageManageBean.personnel.nationalCode}"/><br/>
+    <h:commandButton value="save" actionListener="#{signInPageManageBean.doInfo()}"  /><hr/>
+    <h:outputText value="#{signInPageManageBean.message}"/><hr/>
     <h:commandButton value="add in DataBase and Go to Home " actionListener="#{signInPageManageBean.InsertInfo}" action="welcomePage"/><br/>
 
 </h:form>

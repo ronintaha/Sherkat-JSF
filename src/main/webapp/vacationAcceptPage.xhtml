@@ -23,31 +23,31 @@
         <h3>
             WELCOME , Please enter your manager ID :
         </h3><br/>
-        <h:inputText value="#{massages.manID}"/>
-        <h:commandButton value="Login" actionListener="#{massages.doManager()}"/>
+        <h:inputText value="#{vacationAcceptManageBean.manID}" />
+        <h:commandButton value="Login" actionListener="#{vacationAcceptManageBean.doManager()}"/>
         <h3>
-            #{massages.massage2}
+            #{vacationAcceptManageBean.massage2}
         </h3><br/>
 
-        <h:inputText value="#{personnel.nationalCode}"/>
+        <h:inputText value="#{vacationAcceptManageBean.personnel.nationalCode}" />
 
-        <h:commandButton value="Check" actionListener="#{getVacationDao.getVacationDao()}" >
+        <h:commandButton value="Check" actionListener="#{vacationAcceptManageBean.getVacationDao()}" >
 <!--            <f:actionListener binding="#{getVacationDao.getVacationDao()}"/>-->
-            <f:actionListener binding="#{massages.doLeave()}"/>
+            <f:actionListener binding="#{vacationAcceptManageBean.doLeave()}"/>
         </h:commandButton><hr/>
         <h3>
-            #{massages.massageLeave}
+            #{vacationAcceptManageBean.massageLeave}
         </h3>
 
-        <h:selectOneRadio value="#{vacation.confirm}">
+        <h:selectOneRadio value="#{vacationAcceptManageBean.vacation.confirm}">
             <f:selectItem itemValue="confirmed" itemLabel="Yes"/>
             <f:selectItem itemValue="not confirmed" itemLabel="No"/>
         </h:selectOneRadio>
-        <h:commandButton value="confirm" actionListener="#{confirmDao.confirmData()}">
-        <f:actionListener binding="#{massages.doconfirm()}"/>
+        <h:commandButton value="confirm" actionListener="#{vacationAcceptManageBean.confirmData()}">
+        <f:actionListener binding="#{vacationAcceptManageBean.doConfirm()}"/>
     </h:commandButton><hr/>
         <h4>
-        #{massages.massageConfirm}
+        #{vacationAcceptManageBean.massageConfirm}
         </h4>
         <h:commandButton value="Back to home" action="welcomePage"/>
 

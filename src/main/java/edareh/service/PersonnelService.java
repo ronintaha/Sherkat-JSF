@@ -42,4 +42,8 @@ public class PersonnelService {
         personelDao.InsertInfo(personnel);
     }
 
+    public void getInformation(){
+        personelDao.getInformation();
+    }
+
 }
