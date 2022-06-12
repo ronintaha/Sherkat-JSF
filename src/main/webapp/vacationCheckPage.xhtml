@@ -22,8 +22,8 @@
         <h3>
             Please enter your national code to see your request answer :
         </h3>
-        <h:inputText value="#{vacationCheckManageBean.personnel.nationalCode}"/>
-        <h:commandButton value="Check" actionListener="#{vacationCheckManageBean.getVacationDao()}">
+        <h:inputText value="#{vacationCheckManageBean.nationalCode}"/>
+        <h:commandButton value="Check" actionListener="#{vacationCheckManageBean.getInformationForVacation()}">
             <f:actionListener binding="#{vacationCheckManageBean.doCheck()}"/>
         </h:commandButton>
         <h4>

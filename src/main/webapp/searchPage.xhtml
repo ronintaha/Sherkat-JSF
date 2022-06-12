@@ -18,7 +18,7 @@
 
 <h:body>
 <h:form>
-    <h3>Please enter national code of person you want too find: </h3> <h:inputText value="#{searchPageManageBean.personnel.nationalCode}" readonly="false"/> <br/>
+    <h3>Please enter national code of person you want too find: </h3> <h:inputText value="#{searchPageManageBean.nationalCode}"  /> <br/>
 
     <h:commandButton actionListener="#{searchPageManageBean.getInformation()}" value="Search"/><hr/>
     <h:outputText value="Information of person you want is ... "/><hr/>

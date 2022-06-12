@@ -1,16 +1,15 @@
 package edareh.service;
 
-import edareh.dao.PersonelDao;
+import edareh.dao.PersonnelDao;
 import edareh.entity.Personnel;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import java.util.List;
 
 @RequestScoped
 public class PersonnelService {
     @Inject
-    private PersonelDao personelDao;
+    private PersonnelDao personnelDao;
     @Inject
     private Personnel personnel;
 
@@ -35,15 +34,15 @@ public class PersonnelService {
 //    }
 
     public void creatTablePersonnel() {
-        personelDao.createTablePersonnel();
+        personnelDao.createTablePersonnel();
     }
 
-    public void InsertInfo(){
-        personelDao.InsertInfo(personnel);
+    public void InsertInfo(Personnel personnel){
+        personnelDao.InsertInfo(personnel);
     }
 
-    public void getInformation(){
-        personelDao.getInformation();
+    public Personnel getInformation(String national) {
+        return personnelDao.getInformation(national);
     }
 
 }

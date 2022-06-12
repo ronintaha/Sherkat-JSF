@@ -17,12 +17,8 @@ public class WelcomePageManagedBean {
     private VacationService vacationService;
 
 
-    public void createTablePersonnel() {
-        personnelService.creatTablePersonnel();
-    }
 
-    public void createTableVacation() {
-        vacationService.creatTableVacation();
-    }
+
+
 
 }

@@ -1,6 +1,7 @@
 package edareh.service;
 
 import edareh.dao.VacationDao;
+import edareh.entity.Vacation;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -10,18 +11,22 @@ public class VacationService {
     @Inject
     VacationDao vacationDao;
 
+
     public void creatTableVacation(){
 
         vacationDao.creatTableVacation();
 
     }
-    public void confirmData(){
-        vacationDao.confirmData();
+    public void confirmData(Vacation vacation){
+        vacationDao.confirmData(vacation);
     }
-    public void getVacationDao(){
-        vacationDao.getVacationDao();
+    public Vacation getVacationDao(String nationalCode){
+       return vacationDao.getVacationDao(nationalCode);
     }
-    public void insertVacation(){
-        vacationDao.insertVacation();
+    public void insertVacation(Vacation vacation){
+        vacationDao.insertVacation(vacation);
+    }
+    public Vacation getInformationForVacation(String nationalCode){
+       return vacationDao.getInformationForVacation(nationalCode);
     }
 }

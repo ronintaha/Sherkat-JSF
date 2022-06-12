@@ -45,6 +45,26 @@ public class VacationReqManageBean {
 
     private String  massage;
 
+    private String nationalCode;
+
+    private int dayLeave;
+
+    public int getDayLeave() {
+        return dayLeave;
+    }
+
+    public void setDayLeave(int dayLeave) {
+        this.dayLeave = dayLeave;
+    }
+
+    public String getNationalCode() {
+        return nationalCode;
+    }
+
+    public void setNationalCode(String nationalCode) {
+        this.nationalCode = nationalCode;
+    }
+
     public String getMassage() {
         return massage;
     }
@@ -63,18 +83,24 @@ public class VacationReqManageBean {
         this.massage1 = massage1;
     }
 
-    public  void getInformation(){
-        personnelService.getInformation();
+    public void getInformationForVacation(){
+       vacation = vacationService.getInformationForVacation(nationalCode);
     }
     public void doVacation(){
-         massage =  "Mr "+ personnel.getLasteName()+" welcome , please chose the day of month you want to leave : ";
+         massage =  "Mr "+ vacation.getlName()+" welcome , please chose the day of month you want to leave : ";
 
     }
     public void doDay(){
-       massage1 = "Mr "+ personnel.getLasteName()+ " you want to leave in "+ vacation.getDayOfLeave()+ " om";
+       massage1 = " you want to leave in "+ dayLeave + " om";
 
     }
     public void insertVacation(){
-        vacationService.insertVacation();
+     vacation =  vacationService.getInformationForVacation(nationalCode);
+      vacation.setDayOfLeave(dayLeave);
+        vacationService.insertVacation(vacation);
+    }
+
+    public void createTableVacation() {
+        vacationService.creatTableVacation();
     }
 }

@@ -24,15 +24,14 @@ public class VacationDao {
     }
 
 
-    public void insertVacation() {
+    public void insertVacation(Vacation vacation) {
         DBHandler dbHandler = new DBHandler();
-        Vacation vacation = new Vacation();
-        Personnel personnel = new Personnel();
+//        Personnel personnel = new Personnel();
 //        ManagerData managerData = new ManagerData();
         String day = String.valueOf(vacation.getDayOfLeave());
         String lastName = vacation.getlName();
 //        String confirm1 = vacationData.getConfirm();
-        String nCode1 = personnel.getNationalCode();
+        String nCode1 = vacation.getnCode();
 
         String iSQL = "INSERT INTO VACATION(LastN,VacationDay,NATIONALCODE) VALUES (?,?,?)";
         try (Connection connection = dbHandler.getConnection()) {
@@ -49,14 +48,14 @@ public class VacationDao {
 
     }
 
-    public void getVacationDao() {
+    public Vacation getVacationDao(String nationalCode) {
         Vacation vacation = new Vacation();
         Personnel personnel = new Personnel();
         DBHandler dbHandler = new DBHandler();
         String gSQL = ("SELECT * FROM VACATION WHERE NATIONALCODE = ? ;");
         try (Connection connection = dbHandler.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(gSQL);
-            preparedStatement.setString(1, personnel.getNationalCode());
+            preparedStatement.setString(1, nationalCode);
             preparedStatement.executeQuery();
             ResultSet resultSet = preparedStatement.getResultSet();
             if (resultSet.next()) {
@@ -76,11 +75,12 @@ public class VacationDao {
             throw new RuntimeException(e);
         }
 
+        return vacation;
     }
 
-    public void confirmData() {
+    public void confirmData(Vacation vacation) {
         DBHandler dbHandler = new DBHandler();
-        Vacation vacation = new Vacation();
+
         String cSQL = "UPDATE VACATION SET Confirm = ? WHERE NATIONALCODE = ?";
         try (Connection connection = dbHandler.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(cSQL);
@@ -93,5 +93,47 @@ public class VacationDao {
         }
 
 
+    }
+
+    public Vacation getInformationForVacation(String searchNationalCode) {
+//        Personnel personnel = new Personnel();
+        Vacation vacation = new Vacation();
+
+        DBHandler dbHandler = new DBHandler();
+        String query = ("SELECT * FROM PERSONEL1 WHERE NATIONALCODE =? ;");
+
+        try (Connection connection = dbHandler.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, searchNationalCode);
+            preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.getResultSet();
+
+            if (resultSet.next()) {
+
+//                String name = resultSet.getString("FIRSTNAME");
+                String lastName = resultSet.getString("LASTNAME");
+//                String age = resultSet.getString("AGE");
+                String nationalCode = resultSet.getString("NATIONALCODE");
+//                System.out.println("Information of person you want is : \n"+"Name : " + name +"\n" +"LastName : " +lastName+ "\n" + "Age : " + age+"\n");
+//                personnel.setName(name);
+//                personnel.setLasteName(lastName);
+//                personnel.setAge(age);
+//                personnel.setNationalCode(nationalCode);
+                vacation.setlName(lastName);
+                vacation.setnCode(nationalCode);
+            }
+//            Statement statement = connection.createStatement();
+//            statement.executeQuery(iSQL);
+//            ResultSet resultSet = statement.getResultSet();
+//           String name = resultSet.getString("FIRSTNAME");
+//           String last =  resultSet.getString("LASTNAME");
+//           String age =  resultSet.getString("AGE");
+//            System.out.println("Information of person you want is : "+name+""+last+""+age);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return vacation;
     }
 }

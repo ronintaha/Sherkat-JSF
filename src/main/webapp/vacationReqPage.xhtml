@@ -19,14 +19,18 @@
 <h:body>
 <h:form>
     <h3>Please enter your national code to login: </h3>
-    <h:inputText value="#{vacationReqManageBean.personnel.nationalCode}"/><hr/>
+    <h:inputText value="#{vacationReqManageBean.nationalCode}"/><hr/>
     <h:commandButton value="Login">
-        <f:actionListener binding="#{vacationReqManageBean.getInformation()}"/>
+        <f:actionListener binding="#{vacationReqManageBean.createTableVacation()}"/>
+        <f:actionListener binding="#{vacationReqManageBean.getInformationForVacation()}"/>
+
         <f:actionListener binding="#{vacationReqManageBean.doVacation()}"/>
+
     </h:commandButton><hr/>
+
     <h:outputText value="#{vacationReqManageBean.massage}"/><hr/>
 
-    <h:selectOneListbox value="#{vacationReqManageBean.vacation.dayOfLeave}" size="5">
+    <h:selectOneListbox value="#{vacationReqManageBean.dayLeave}" size="5">
 
         <f:selectItem itemValue="1" itemLabel="1"/>
         <f:selectItem itemValue="2" itemLabel="2"/>

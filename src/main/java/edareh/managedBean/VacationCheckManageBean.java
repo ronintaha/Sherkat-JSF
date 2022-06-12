@@ -19,6 +19,15 @@ public class VacationCheckManageBean {
     private Personnel personnel;
     private Vacation vacation;
 
+    private String nationalCode;
+
+    public String getNationalCode() {
+        return nationalCode;
+    }
+
+    public void setNationalCode(String nationalCode) {
+        this.nationalCode = nationalCode;
+    }
 
     public Personnel getPersonnel() {
         return personnel;
@@ -44,8 +53,9 @@ public class VacationCheckManageBean {
         vacation = new Vacation();
     }
 
-    public void getVacationDao(){
-        vacationService.getVacationDao();
+    public void getInformationForVacation(){
+
+         vacation = vacationService.getVacationDao(nationalCode);
     }
     public void doCheck(){
          massageCheck = "Mr "+ vacation.getlName()+" your vacation request has "+ vacation.getConfirm();

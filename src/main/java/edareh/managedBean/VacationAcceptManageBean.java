@@ -64,6 +64,16 @@ public class VacationAcceptManageBean {
 
     private String massageConfirm;
 
+    private String nationalCode;
+
+    public String getNationalCode() {
+        return nationalCode;
+    }
+
+    public void setNationalCode(String nationalCode) {
+        this.nationalCode = nationalCode;
+    }
+
     public String getMassageConfirm() {
         return massageConfirm;
     }
@@ -81,14 +91,15 @@ public class VacationAcceptManageBean {
     }
 
     public void confirmData(){
-        vacationService.confirmData();
+        vacation.setnCode(nationalCode);
+        vacationService.confirmData(vacation);
     }
     public void doConfirm(){
         massageConfirm = "saved";
 
     }
     public void getVacationDao(){
-        vacationService.getVacationDao();
+       vacation = vacationService.getVacationDao(nationalCode);
     }
     public void doManager(){
 
@@ -100,6 +111,7 @@ public class VacationAcceptManageBean {
 
     }
     public void doLeave(){
+        vacationService.getVacationDao(nationalCode);
        massageLeave =  "Mr "+ vacation.getlName()+ " want to leave in "+ vacation.getDayOfLeave()+ " om , Do you confirm it ? ";
     }
 

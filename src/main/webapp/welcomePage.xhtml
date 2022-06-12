@@ -10,22 +10,34 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
     <title>Sherkat JSF</title>
+    <h:outputStylesheet library="css" name="style.css"  />
 </h:head>
 
 <h:body>
-    <h:form>
-        <h:messages/>
-<h:outputText value="WELCOME"/><hr/>
-<h:commandButton actionListener="#{welcomePageManagedBean.createTablePersonnel()}" action="signInPage" value="Sign in"/><hr/>
-<h:commandButton action="searchPage" value="search"/><hr/>
-<h:commandButton actionListener="#{welcomePageManagedBean.createTableVacation}" action="vacationReqPage" value="Vacation request"/><hr/>
-<h:commandButton action="vacationAcceptPage" value="Manage requests"/><hr/>
-<h:commandButton action="vacationCheckPage" value="Check your request"/><hr/>
-    </h:form>
+
+    <div>
+
+        <h4>WELCOME </h4> <hr/>
+
+<p:linkButton style="background: brown"  outcome="ShowListPage" value="Show all personnels"/><hr/>
+
+<p:linkButton style="background: darkblue"  outcome="searchPage" value="search" /><hr/>
+
+<p:linkButton style="background:indigo"  outcome="vacationReqPage" value="Vacation request"/><hr/>
+
+<p:linkButton style="background: blueviolet" outcome="vacationAcceptPage" value="Manage requests"/><hr/>
+
+<p:linkButton style="background: firebrick" outcome="vacationCheckPage" value="Check your request"/><hr/>
+
+    </div>
+
 </h:body>
+
+
 
 </html>

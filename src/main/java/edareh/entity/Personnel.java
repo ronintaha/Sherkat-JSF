@@ -4,17 +4,19 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @RequestScoped
+@Named
 public class Personnel {
-    private static String name ;
-    private static String lasteName;
-    private static String age;
-    private static String nationalCode;
+    private  String name ;
+    private  String lasteName;
+    private  String age;
+    private  String nationalCode;
+
 
     public Personnel(){
-        this.name=name;
-        this.lasteName=lasteName;
-        this.age=age;
-        this.nationalCode = nationalCode;
+//        this.name=name;
+//        this.lasteName=lasteName;
+//        this.age=age;
+//        this.nationalCode = nationalCode;
 
 //        list.add(this);
 //        DataStore.dataList.add(this);

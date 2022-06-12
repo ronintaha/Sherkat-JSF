@@ -1,6 +1,5 @@
 package edareh.managedBean;
 
-import edareh.dao.PersonelDao;
 import edareh.entity.Personnel;
 import edareh.service.PersonnelService;
 
@@ -18,6 +17,25 @@ public class SearchPageManageBean {
 
     private Personnel personnel;
 
+    private String nationalCode;
+
+    @PostConstruct
+    public void init() {
+        personnel = new Personnel();
+    }
+
+    public void getInformation() {
+        personnel = personnelService.getInformation(nationalCode);
+    }
+
+    public String getNationalCode() {
+        return nationalCode;
+    }
+
+    public void setNationalCode(String nationalCode) {
+        this.nationalCode = nationalCode;
+    }
+
     public Personnel getPersonnel() {
         return personnel;
     }
@@ -25,13 +43,4 @@ public class SearchPageManageBean {
     public void setPersonnel(Personnel personnel) {
         this.personnel = personnel;
     }
-    @PostConstruct
-    public void init(){
-        personnel = new Personnel();
-    }
-
-    public void getInformation(){
-        personnelService.getInformation();
-    }
-
 }

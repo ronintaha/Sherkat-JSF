@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: programmer
+  Date: 6/12/22
+  Time: 12:55 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Show List</title>
+</h:head>
+
+<h:body>
+    <h:form id="speedDialForm">
+<div class="speeddial-linear-demo" style="position: relative; height: 60px; background-color: aliceblue">
+    <p:speedDial direction="right"  >
+        <p:menuitem  style="width: 100px" value="SignIn" />
+        <p:menuitem style="width: 100px" value="Search" />
+        <p:menuitem style="width: 100px" value="Home" />
+        <p:menuitem icon="pi pi-external-link" />
+    </p:speedDial>
+</div>
+    </h:form>
+
+    <div style="margin-top: 20px" >
+        <h:dataTable value="#{personnelDao.findAll()}" var="c" style="background-color: blanchedalmond " >
+
+            <h:column ><f:facet name="header">Name</f:facet>
+                #{c.name}
+            </h:column>
+
+            <h:column><f:facet name="header">LastName</f:facet>
+                #{c.lasteName}
+            </h:column>
+
+            <h:column><f:facet name="header">Age</f:facet>
+                #{c.age}
+            </h:column>
+
+            <h:column><f:facet name="header">NationalCode</f:facet>
+                #{c.nationalCode}
+            </h:column>
+
+        </h:dataTable>
+    </div>
+</h:body>
+
+<style type="text/css">
+    .speeddial-linear-demo .ui-speeddial-direction-right {
+        left: 0;
+        top: calc(80% - 3rem);
+    }
+</style>
+
+</html>

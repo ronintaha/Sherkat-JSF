@@ -5,11 +5,11 @@ import javax.inject.Named;
 
 @RequestScoped
 public class Vacation {
-    private static int dayOfLeave;
-    private static String lName;
-    private static String confirm;
+    private  int dayOfLeave;
+    private  String lName;
+    private  String confirm;
 
-    private static String nCode;
+    private  String nCode;
 
     public String getnCode() {
         return nCode;
@@ -26,7 +26,7 @@ public class Vacation {
     }
 
     public  void setlName(String lName) {
-        Vacation.lName = lName;
+        this.lName = lName;
     }
 
     public  String getConfirm() {
@@ -34,11 +34,11 @@ public class Vacation {
     }
 
     public void setConfirm(String confirm) {
-        Vacation.confirm = confirm;
+        this.confirm = confirm;
     }
 
     public Vacation(){
-        this.dayOfLeave=dayOfLeave;
+//        this.dayOfLeave=dayOfLeave;
 //        leaveList1.add(this);
 //        DataStore.vacationDataList.add(this);
     }

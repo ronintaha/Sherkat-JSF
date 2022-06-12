@@ -27,8 +27,9 @@ public class SignInPageManageBean {
     public void doInfo(){
         message = "Mr "+ personnel.getLasteName()+" your iformations are saved";
     }
+
     public void InsertInfo(){
-        personnelService.InsertInfo();
+        personnelService.InsertInfo(personnel);
     }
 
     public Personnel getPersonnel() {
@@ -47,5 +48,8 @@ public class SignInPageManageBean {
         this.message = message;
     }
 
+    public void createTablePersonnel() {
+        personnelService.creatTablePersonnel();
+    }
 
 }
