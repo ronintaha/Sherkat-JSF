@@ -7,21 +7,23 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.ArrayList;
+import java.util.List;
 
 @RequestScoped
 @Named
 public class SignInPageManageBean {
-
-
     @Inject
-    PersonnelService personnelService;
-
+    private PersonnelService personnelService;
     private Personnel personnel;
     private String message;
+
+    private List<Personnel> personnelList;
 
     @PostConstruct
     public void init() {
         personnel = new Personnel();
+        findAll();
     }
 
     public void doInfo(){
@@ -30,14 +32,6 @@ public class SignInPageManageBean {
 
     public void InsertInfo(){
         personnelService.InsertInfo(personnel);
-    }
-
-    public Personnel getPersonnel() {
-        return personnel;
-    }
-
-    public void setPersonnel(Personnel personnel) {
-        this.personnel = personnel;
     }
 
     public String getMessage() {
@@ -52,4 +46,23 @@ public class SignInPageManageBean {
         personnelService.creatTablePersonnel();
     }
 
+    private void findAll(){
+        personnelList = personnelService.findAll();
+    }
+
+    public Personnel getPersonnel() {
+        return personnel;
+    }
+
+    public void setPersonnel(Personnel personnel) {
+        this.personnel = personnel;
+    }
+
+    public List<Personnel> getPersonnelList() {
+        return personnelList;
+    }
+
+    public void setPersonnelList(List<Personnel> personnelList) {
+        this.personnelList = personnelList;
+    }
 }

@@ -15,28 +15,39 @@
 
 <h:head>
     <title>Sherkat JSF</title>
-    <h:outputStylesheet library="css" name="style.css"  />
+    <h:form id="speedDialForm">
+        <div class="speeddial-linear-demo" style="position: relative; height: 60px; background-color: aliceblue">
+            <p:speedDial direction="right"  >
+                <p:menuitem  style="width: 100px" value="SignIn" outcome="signInPage" />
+                <p:menuitem style="width: 100px" value="Search" outcome="searchPage" />
+                <p:menuitem style="width: 100px" value="Home" outcome="welcomePage" />
+                <p:menuitem icon="pi pi-external-link" />
+            </p:speedDial>
+        </div>
+    </h:form>
 </h:head>
 
-<h:body>
+<body>
 
-    <div>
 
-        <h4>WELCOME </h4> <hr/>
+<div style="background-color: aquamarine; height: 150px; text-align: center">
+        <h4 style="padding-top: 65px;size: 100px">WELCOME !</h4>
+</div>
 
-<p:linkButton style="background: brown"  outcome="ShowListPage" value="Show all personnels"/><hr/>
+<div style="margin-left: 400px ;margin-right: 400px" >
 
-<p:linkButton style="background: darkblue"  outcome="searchPage" value="search" /><hr/>
+<p:linkButton  style="background: brown;width: 200px"  outcome="showListPage" value="Show all personnels"/>
 
-<p:linkButton style="background:indigo"  outcome="vacationReqPage" value="Vacation request"/><hr/>
+<p:linkButton style="background:indigo;width: 200px"  outcome="vacationReqPage" value="Vacation request"/>
 
-<p:linkButton style="background: blueviolet" outcome="vacationAcceptPage" value="Manage requests"/><hr/>
+<p:linkButton style="background: blueviolet;width: 200px" outcome="vacationAcceptPage" value="Manage requests"/>
 
-<p:linkButton style="background: firebrick" outcome="vacationCheckPage" value="Check your request"/><hr/>
+<p:linkButton style="background: firebrick;width: 200px" outcome="vacationCheckPage" value="Check your request"/>
 
     </div>
 
-</h:body>
+
+</body>
 
 
 

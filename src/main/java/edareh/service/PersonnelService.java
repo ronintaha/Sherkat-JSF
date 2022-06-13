@@ -5,6 +5,7 @@ import edareh.entity.Personnel;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import java.util.List;
 
 @RequestScoped
 public class PersonnelService {
@@ -45,4 +46,7 @@ public class PersonnelService {
         return personnelDao.getInformation(national);
     }
 
+    public List<Personnel> findAll(){
+       return personnelDao.findAll();
+    }
 }

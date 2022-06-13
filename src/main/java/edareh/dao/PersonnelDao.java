@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RequestScoped
-@Named
 public class PersonnelDao {
 
     public void createTablePersonnel(){
