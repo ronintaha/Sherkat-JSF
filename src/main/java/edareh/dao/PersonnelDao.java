@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RequestScoped
-public class PersonnelDao {
+public class  PersonnelDao {
 
     public void createTablePersonnel(){
         DBHandler dbHandler = new DBHandler();

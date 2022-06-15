@@ -10,15 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a82dbb2-5086-4fd5-972f-eb34ce597c1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/content.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/footer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/header.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edareh/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edareh/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edareh/dao/PersonnelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edareh/managedBean/ShowListManageBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edareh/managedBean/SignInPageManageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edareh/managedBean/SignInPageManageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edareh/managedBean/WelcomePageManagedBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edareh/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edareh/service/PersonnelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ShowListPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showListPage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchPage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showListPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showListPage.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/signInPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signInPage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/common.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vacationAcceptPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vacationAcceptPage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vacationCheckPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vacationCheckPage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vacationReqPage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vacationReqPage.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/welcomePage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcomePage.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jspx File" />
-        <option value="jsf" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="jsf" />
         <option value="facelets" />
       </list>
     </option>
@@ -73,6 +78,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/templates" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.2022.2">
@@ -199,7 +208,9 @@
       <workItem from="1654769158299" duration="5733000" />
       <workItem from="1654880005875" duration="2758000" />
       <workItem from="1655001362273" duration="23238000" />
-      <workItem from="1655088310959" duration="13004000" />
+      <workItem from="1655088310959" duration="18446000" />
+      <workItem from="1655174231836" duration="7025000" />
+      <workItem from="1655260703816" duration="6589000" />
     </task>
     <task id="LOCAL-00001" summary="jsf">
       <created>1654599767153</created>
@@ -229,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655024516217</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="jsf component based">
+      <created>1655107767286</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655107767286</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,26 +267,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jsf" />
     <MESSAGE value=" prime faces iconic" />
-    <option name="LAST_COMMIT_MESSAGE" value=" prime faces iconic" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/edareh/Test.java</url>
-          <line>8</line>
-          <properties class="edareh.Test" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edareh/dao/PersonnelDao.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="jsf component based" />
+    <option name="LAST_COMMIT_MESSAGE" value="jsf component based" />
   </component>
 </project>

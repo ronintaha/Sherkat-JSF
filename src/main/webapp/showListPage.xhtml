@@ -12,26 +12,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
     <title>Show List</title>
-    <h:form id="speedDialForm">
-        <div class="speeddial-linear-demo" style="position: relative; height: 60px; background-color: aliceblue">
-            <p:speedDial direction="right"  >
-                <p:menuitem  style="width: 100px" value="SignIn" outcome="signInPage" />
-                <p:menuitem style="width: 100px" value="Search" outcome="searchPage" />
-                <p:menuitem style="width: 100px" value="Home" outcome="welcomePage" />
-                <p:menuitem icon="pi pi-external-link" />
-            </p:speedDial>
-        </div>
-    </h:form>
+
 </h:head>
 
 <h:body>
-
-    <div style="margin-top: 20px" >
-        <h:dataTable value="#{signInPageManageBean.personnelList}" var="personnelVar" style="background-color: indigo " rowClasses="authorTableOddRow,authorTableEvenRow" headerClass="authorTableHeader">
+<ui:composition template="templates/common.xhtml">
+    <ui:define name="content">
+    <div style="margin-top: 20px;margin-bottom: 50px;height: 1000px" >
+        <h:dataTable value="#{signInPageManageBean.personnelList}" var="personnelVar" style="background-color: indigo;width: 350px " rowClasses="authorTableOddRow,authorTableEvenRow" headerClass="authorTableHeader">
 
             <h:column ><f:facet name="header">Name</f:facet>
                 <h:outputText value="#{personnelVar.name}"/>
@@ -51,31 +44,34 @@
 
         </h:dataTable>
     </div>
+        <style type="text/css">
+            .speeddial-linear-demo .ui-speeddial-direction-right {
+                left: 0;
+                top: calc(80% - 3rem);
+            }
+
+            .authorTableHeader {
+                text-align:center;
+                background-color: aquamarine;
+                border-bottom:1px solid #000000;
+                border-top:1px solid #000000;
+                padding:2px;
+            }
+
+            .authorTableOddRow {
+                text-align:center;
+                background-color: aqua;
+            }
+
+            .authorTableEvenRow {
+                text-align:center;
+                background:none repeat scroll 0 0 #D3D3D3;
+            }
+        </style>
+
+    </ui:define>
+</ui:composition>
 </h:body>
 
-<style type="text/css">
-    .speeddial-linear-demo .ui-speeddial-direction-right {
-        left: 0;
-        top: calc(80% - 3rem);
-    }
-
-    .authorTableHeader {
-        text-align:center;
-       background-color: aquamarine;
-        border-bottom:1px solid #000000;
-        border-top:1px solid #000000;
-        padding:2px;
-    }
-
-    .authorTableOddRow {
-        text-align:center;
-        background-color: aqua;
-    }
-
-    .authorTableEvenRow {
-        text-align:center;
-        background:none repeat scroll 0 0 #D3D3D3;
-    }
-</style>
 
 </html>
